@@ -18,7 +18,7 @@
   import { ref, computed } from 'vue';
 
 const transactions = ref([
-  { id: 1, text: 'Flower', amount: -20 },
+  { id: 1, text: 'Flower', amount: -20.01 },
   { id: 2, text: 'Salary', amount: 800 },
   { id: 3, text: 'Book', amount: -110 },
   { id: 4, text: 'Teriyaki', amount: -122 },
@@ -27,7 +27,19 @@ const transactions = ref([
 
 //console.log(transactions.value);
 
+// Get total.
 const total = computed(() => {
   return transactions.value.reduce((acc, transaction) => acc += transaction.amount, 0);
 });
+
+// Get income.
+const income = computed(() => {
+  return transactions.value
+  .filter(transaction => transaction.amount > 0)
+  .reduce((acc, transaction) => acc += transaction.amount, 0).toFixed(2);
+});
+
+
+
+// Get expenses.
 </script>
