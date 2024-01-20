@@ -6,13 +6,3 @@
     </li>
   </ul>
 </template>
-
-<script setup>
-const transactions = [
-  { id: 1, text: 'Flower', amount: -20 },
-  { id: 2, text: 'Salary', amount: 300 },
-  { id: 3, text: 'Book', amount: -10 },
-  { id: 3, text: 'Teriyaki', amount: -122 },
-  { id: 4, text: 'Camera', amount: 150 },
-];
-</script>
