@@ -83,7 +83,7 @@ const handleTransactionDeleted = (id) => {
 
   saveTransactionsToLocalStorage();
 
-  toast.success('Transaction deleted.');
+  toast.success('Transaction just deleted.');
 };
 
 // Save transactions to local storage
